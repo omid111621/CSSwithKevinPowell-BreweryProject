@@ -1,0 +1,46 @@
+.logo {
+    width: 250px;
+    margin: 2em auto;
+    display: block;
+}
+
+.section--intro {
+    background: {
+        image: url('../images/hero-bg.jpg');
+        size: cover;
+        repeat: no-repeat;
+    }
+
+    padding: 10vh 0;
+    text-align: center;
+    color: $clr-brown-base;
+
+    .logo{
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        margin-bottom: 2.5em;
+    }
+
+    
+}
+
+.intro__text{
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    
+    &::after{
+        content: '';
+        display: block;
+        height: 1px;
+        background: $clr-brown-light;
+        opacity: .3;
+        width: 100px;
+        position: absolute;
+        top: -1em;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
